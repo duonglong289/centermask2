@@ -113,7 +113,7 @@ def setup(args):
     cfg.merge_from_list(args.opts)
 
     if args.eval_only:
-        cfg.MODEL.WEIGHTS = "/root/centermask2/log_70_30/CenterMask-R-50-FPN-ms-3x/model_0009999.pth"
+        cfg.MODEL.WEIGHTS = "/root/centermask2/log_50_50/CenterMask-R-50-FPN-ms-3x/model_0009999.pth"
         cfg.SOLVER.IMS_PER_BATCH = 6
 
     cfg.freeze()
@@ -124,7 +124,7 @@ def setup(args):
 def main(args):
 
     from detectron2.data.datasets import register_coco_instances
-    folder_data = "/root/detectron2/MADS_data_train_test/70_30_tonghop"
+    folder_data = "/root/detectron2/MADS_data_train_test/60_40_tonghop"
 
     # train_data
     name        = "mads_train"
